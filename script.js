@@ -1,5 +1,5 @@
 // User variables
-var enter;
+var confirmLength;
 var confirmNumber;
 var confirmCharacter;
 var confirmUppercase;
@@ -11,8 +11,14 @@ number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 UppLet = ["A", "B", "C", "D", "E", "F", "G", "H","I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "W", "X", "Y", "Z"];
 lowLet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
+var = choices;
 
 var generateBtn = document.querySelector("#generate");
+
+get.addEventListener("click", function () {
+  pass=generatePassword();
+  document.getElementById("password").placeholder = pass;
+});
 
 // Write password to the #password input
 function writePassword() {
