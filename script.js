@@ -14,7 +14,9 @@ lowerCaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
 
 var generateBtn = document.querySelector("#generate");
 
+// Random integer generator
 function randomInt(min, max) {
+  // if 'max' is undefined, assem range from 0 to min
   if (!max) {
     max = min
     min = 0
@@ -30,9 +32,10 @@ function getRandomItem(list) {
 // Prompts for the criteria of password
 function generatePassword () {
 
+  // While loop prompt for length of password
   while (true) {
     var userInput = prompt ("Enter the number of characters you want for your password. It must be between 8 and 128 characters.");
-    
+    // Exits the loop for password length criteria prompt
     if (userInput === null) {
       return
     }
@@ -47,13 +50,13 @@ function generatePassword () {
       break
     }
   }
-
+  // Prompts for the rest of the criterias
   var confirmNumber = confirm ("Do you want numbers in your password?");
   var confirmCharacter = confirm ("Do you want special characters in your password?");
   var confirmUppercase = confirm ("Do you want uppercase characters in your password?");
   var confirmLowercase = confirm ("Do you want lowercase characteres in your password?");
   
-
+  // Push selections to completePassword array
   if (confirmNumber) {
     completePassword.push(numberList)
   }
@@ -75,7 +78,7 @@ function generatePassword () {
   } 
 
   var generatePassword = ""
-
+  // Compiling selections to generate password
   for (var i = 0; i < confirmLength; i++) {
     var randomList = getRandomItem(completePassword)
     var randomChar = getRandomItem(randomList)
@@ -89,7 +92,7 @@ function generatePassword () {
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+  // Prevents from showing 'undefined'
   if (password) {
   passwordText.value = password;
   }
