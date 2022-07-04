@@ -4,6 +4,7 @@ var confirmNumber;
 var confirmCharacter;
 var confirmUppercase;
 var confirmLowercase;
+// Array to collect all selections for password
 var completePassword = [];
 
 // Password variable values
