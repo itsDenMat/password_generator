@@ -8,7 +8,7 @@ Application that enables anyone  to generate random passwords based on the crite
 
 * User will have to declare the preferred amount of characters before moving forward to the next step. Application will prompt to enter a number if letters were entered.
 
-<img src= "./Assets/functionality.gif">
+<center<img src= "https://raw.githubusercontent.com/itsDenMat/password_generator/main/Assets/functionality_1.gif" heigh=350 width=350>
 
 <br>
 
