@@ -63,14 +63,19 @@ function generatePassword () {
     completePassword.push(lowerCaseList)
   }
 
+  if (completePassword == 0) {
+    alert ("You have to select at least one criteria.")
+  } 
+
   var generatePassword = ""
 
   for (var i = 0; i < confirmLength; i++) {
     var randomList = getRandomItem(completePassword)
     var randomChar = getRandomItem(randomList)
-    console.log(randomChar)
+    generatePassword += randomChar
   }
 }
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
