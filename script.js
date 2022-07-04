@@ -29,23 +29,30 @@ function getRandomItem(list) {
 
 // Prompts for the criteria of password
 function generatePassword () {
-  var userInput = prompt ("Enter the number of characters you want for your password. It must be between 8 and 128 characters.");
+
+  while (true) {
+    var userInput = prompt ("Enter the number of characters you want for your password. It must be between 8 and 128 characters.");
+    
+    if (userInput === null) {
+      return
+    }
+
+    var confirmLength = parseInt(userInput)
+
+    if (isNaN(confirmLength)) {
+      alert ("Please enter a number!")
+    } else if (confirmLength < 8 || confirmLength >128) {
+      alert ("Invalid password length! Password length must be between 18 and 128 characters.")
+    } else {
+      break
+    }
+  }
+
   var confirmNumber = confirm ("Do you want numbers in your password?");
   var confirmCharacter = confirm ("Do you want special characters in your password?");
   var confirmUppercase = confirm ("Do you want uppercase characters in your password?");
   var confirmLowercase = confirm ("Do you want lowercase characteres in your password?");
   
-  var confirmLength = parseInt(userInput)
-
-  if (isNaN(confirmLength)) {
-    alert ("Please enter a number!")
-    return
-  }
-
-  if (confirmLength < 8 || confirmLength >128) {
-    alert ("Password length must be between 8 and 128 characters")
-    return
-  }
 
   if (confirmNumber) {
     completePassword.push(numberList)
@@ -74,6 +81,8 @@ function generatePassword () {
     var randomChar = getRandomItem(randomList)
     generatePassword += randomChar
   }
+
+  return generatePassword
 }
 
 // Write password to the #password input
