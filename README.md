@@ -4,18 +4,17 @@ Application that enables anyone  to generate random passwords based on the crite
 
 This application emphasizes the use of Javascript to generate a random and secure password for the user.
 
-<br></br>
+<br>
 
-## Accessing the Application
+##  Accessing the Application
 
 To access the application, you can follow the deployment link or download the sources files in this GitHub repository.
 
 <p><strong>Deployment Link:</strong> <a href="https://itsdenmat.github.io/password_generator/">Password Generator</a></p>
 
-<p><strong>GitHub:</strong></p>
+<p><strong>GitHub:</strong> <a href="https://github.com/itsDenMat/password_generator">GitHub Password Generator Repository</a></p>
 
-
-
+<br>
 
 ## Password Generator functionality
 
@@ -23,35 +22,42 @@ To access the application, you can follow the deployment link or download the so
 
 <p align="center"><img src= "https://raw.githubusercontent.com/itsDenMat/password_generator/main/Assets/functionality_1.gif" height="500" width="600"></p>
 
-<br></br>
+<br>
 
 * User will have the ability to exit from the first criteria prompt by hitting "cancel" and will be redirected back to the home page of the application.
 
 <p align="center"><img src = "https://raw.githubusercontent.com/itsDenMat/password_generator/main/Assets/functionality_2.gif" height="500" width="600"></p>
 
-<br></br>
+<br>
 
 * User will have the ability to choose if lowercase, uppercase, numeric, and/or special characters are included to generate a random password.
 
 <p align="center"><img src = "https://raw.githubusercontent.com/itsDenMat/password_generator/main/Assets/functionality_3.gif" height="500" width="600"></p>
 
-<br></br>
+<br>
 
 * User will be prompted to select at least one criteria if none were selected.
 
 <p align="center"><img src = "https://raw.githubusercontent.com/itsDenMat/password_generator/main/Assets/functionality_4.gif" height="500" width="600"></p>
 
-<br></br>
+<br>
 
 * Password will be generated and displayed in the text box after the prefered criterias were selected.
 
 <p align="center"><img src ="https://raw.githubusercontent.com/itsDenMat/password_generator/main/Assets/functionality_5.gif" height="500" width="600"></p>
 
-<br></br>
-
-<p align="center">
-Click the link below to access application:
 <br>
 
-</p>
-
+## Features:
+* HTML Page (index.html)
+    * Contains basic items and buttons with divs, ids, and classes.
+* CSS Page (style.css)
+    * Contains styling for html features.
+    * Contains media queries for responsiveness.
+* Javascript (script.js)
+    * Contains the following items:
+        * variable with arrays
+        * Random integer generator
+        * Functions
+        * While loop, if, and if else statements
+        * Event listener
